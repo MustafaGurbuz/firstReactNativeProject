@@ -15,11 +15,11 @@ class Tweets extends Component {
   renderItem({ item }) {
     return (
       <TouchableOpacity key={item.uid}
-                        onPress={() => {
-                          Actions.updateTweet({
-                            person: item
-                          })
-                        }}>
+        onPress={() => {
+          Actions.updateTweet({
+            person: item
+          })
+        }}>
         <Card>
           <Text style={styles.tweetStyle}> {item.person} </Text>
           <Text style={styles.emailStyle}> {item.email} </Text>
@@ -33,8 +33,8 @@ class Tweets extends Component {
     return (
       <View style={styles.tweetListContainer}>
         <FlatList data={personList}
-                  renderItem={this.renderItem}
-                  keyExtractor={(item) => item.uid} />
+          renderItem={this.renderItem}
+          keyExtractor={(item) => item.uid} />
       </ View>
     )
   }

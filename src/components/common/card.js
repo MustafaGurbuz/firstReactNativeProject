@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   cardWrapper: {
     height: 87,
     margin: 10,
-    borderWidth: 1,
-    borderRadius: 2,
+    borderWidth: 2,
+    borderRadius: 4,
     borderColor: '#dddddd',
     justifyContent: 'space-between',
     alignItems: 'flex-start'

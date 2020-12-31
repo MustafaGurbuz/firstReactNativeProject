@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -10,18 +10,18 @@ import Router from './src/router';
 export default class App extends Component {
   componentWillMount() {
     const config = {
-    apiKey: "AIzaSyAfCyTN5KpaiiZTLz5eH0Dez4MmGKBm82E",
-    authDomain: "firstlogin-b5d18.firebaseapp.com",
-    databaseURL: "https://firstlogin-b5d18.firebaseio.com",
-    projectId: "firstlogin-b5d18",
-    storageBucket: "firstlogin-b5d18.appspot.com",
-    messagingSenderId: "282535791922",
-    appId: "1:282535791922:web:87c06ec452de3b603e5b2b",
-    measurementId: "G-26VZXSW6Y9"
+      apiKey: "AIzaSyDlM2-wWpshJaTxXVd4Y9QwipS4QsAmjvY",
+      authDomain: "first-react-project-9fc83.firebaseapp.com",
+      databaseURL: "https://first-react-project-9fc83-default-rtdb.firebaseio.com",
+      projectId: "first-react-project-9fc83",
+      storageBucket: "first-react-project-9fc83.appspot.com",
+      messagingSenderId: "715195073317",
+      appId: "1:715195073317:web:a974b97cbfa6f2375710cc",
+      measurementId: "G-HT997D3Y3P"
     };
     if (!firebase.apps.length) {
       firebase.initializeApp(config);
-  }
+    }
   }
 
   render() {

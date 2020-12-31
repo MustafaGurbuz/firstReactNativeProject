@@ -8,6 +8,7 @@ export const UPDATE_TWEET = 'update_tweet';
 export const DELETE_TWEET = 'delete_tweet';
 
 const REF_DATABASE = '/person';
+//const CHILD_REF = '/contact';
 export const changeTweet = (person) => {
   return {
     type: TWEET_CHANGED,
@@ -24,7 +25,7 @@ export const sendTweet = (person) => {
     firebase.database().ref(REF_DATABASE)
       .push({ email, person })
       .then(() => {
-        Actions.main();
+        Actions.tweets();
         dispatch({
           type: SEND_TWEET
         })
@@ -52,7 +53,7 @@ export const updateTweet = ({ person, uid, email }) => {
         person, email
       })
       .then(() => {
-        Actions.main();
+        Actions.tweets();
         dispatch({
           type: UPDATE_TWEET
         })
@@ -65,7 +66,7 @@ export const deleteTweet = (uid) => {
     firebase.database().ref(REF_DATABASE + '/' + uid)
       .remove()
       .then(() => {
-        Actions.main();
+        Actions.tweets();
         dispatch({
           type: DELETE_TWEET
         })
