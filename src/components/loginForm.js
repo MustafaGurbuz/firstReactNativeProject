@@ -45,27 +45,27 @@ class LoginForm extends Component {
     return (
       <View style={styles.loginContainer}>
         <View style={styles.imageContainer}>
-          <Image source={require('./image/oztuncel.jpg')}
-            style={{width:250, height:250}}
+          <Image source={require('./image/amazon.jpg')}
+            style={{ width: 250, height: 250 }}
             resizeMode="contain"
           />
         </View>
-        <View style={{ marginTop:10}}>
+        <View style={{ marginTop: 10 }}>
           <Input text='Email' inputPlaceHolder='Enter Email'
-                 onChangeText={this.onEmailChanged.bind(this)}
-                 value={this.props.email}/>
+            onChangeText={this.onEmailChanged.bind(this)}
+            value={this.props.email} />
         </View>
         <View>
           <Input text='Password' inputPlaceHolder='Enter Password'
-                 onChangeText={this.onPasswordChanged.bind(this)}
-                 secureTextEntry
-                 value={this.props.password}/>
+            onChangeText={this.onPasswordChanged.bind(this)}
+            secureTextEntry
+            value={this.props.password} />
         </View>
         {errorMsg}
         <MyButton spinner={loading}
-                  title='Login'
-                  onPress={this.onButtonClicked.bind(this)}
-                  color='#FFA500' />
+          title='Login'
+          onPress={this.onButtonClicked.bind(this)}
+          color='#FFA500' />
       </View>
     )
   }
@@ -84,12 +84,13 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     alignSelf: 'center'
   },
-  imageContainer:{
-    alignItems:"center",
-    borderColor:"orange",
-    borderWidth:5,
-    borderTopLeftRadius:150,
-    borderBottomEndRadius:150
+  imageContainer: {
+    paddingLeft: 5,
+    alignItems: "center",
+    borderColor: "orange",
+    borderWidth: 5,
+    borderTopLeftRadius: 150,
+    borderBottomEndRadius: 150
   }
 });
 
@@ -101,4 +102,4 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps,
-    { emailChanged, passwordChanged, loginUser, isLoggedIn })(LoginForm);
+  { emailChanged, passwordChanged, loginUser, isLoggedIn })(LoginForm);
